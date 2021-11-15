@@ -12,3 +12,7 @@
     - import_tasks: tasks/inconsolata.yml
       when: install_inconsolata
       tags: ['inconsolata']
+    - import_tasks: tasks/rvm.yml
+      when: install_rvm
+      tags: ['rvm']
+

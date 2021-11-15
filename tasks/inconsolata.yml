@@ -2,6 +2,6 @@
   copy:
     become: yes
     become_method: sudo
-    src: "files/Inconsolata-dz.otf"
+    src: "files/fonts/Inconsolata-dz.otf"
     dest: "/Library/Fonts/Inconsolata-dz.otf"
     mode: "755"

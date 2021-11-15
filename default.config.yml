@@ -15,3 +15,4 @@ homebrew_cask_apps:
   - docker
 
 install_inconsolata: true
+install_rvm: true
