@@ -16,3 +16,4 @@ homebrew_cask_apps:
 
 install_inconsolata: true
 install_rvm: true
+install_oh_my_zsh: true

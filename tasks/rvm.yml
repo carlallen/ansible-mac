@@ -1,5 +1,6 @@
 - name: Detect rvm binary
-  stat: path='~/.rvm/bin/rvm'
+  stat:
+    path: ~/.rvm/bin/rvm
   register: rvm_binary
 
 - name: Install rvm

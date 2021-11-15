@@ -15,4 +15,8 @@
     - import_tasks: tasks/rvm.yml
       when: install_rvm
       tags: ['rvm']
+    - import_tasks: tasks/oh-my-zsh.yml
+      when: install_oh_my_zsh
+      tags: ['oh-my-zsh']
+
 
