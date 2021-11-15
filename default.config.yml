@@ -1,0 +1,17 @@
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - brave-browser
+  - iterm2
+  - sublime-text
+  - discord
+  - steam
+  - slack
+  - spotify
+  - flux
+  - cyberduck
+  - docker
+
+install_inconsolata: true

@@ -1,0 +1,14 @@
+---
+- hosts: all
+
+  vars_files:
+    - default.config.yml
+
+  roles:
+    - role: geerlingguy.mac.homebrew
+      tags: ['homebrew']
+
+  tasks:
+    - import_tasks: tasks/inconsolata.yml
+      when: install_inconsolata
+      tags: ['inconsolata']
