@@ -1,3 +1,5 @@
+git_email: github@allenofmn.com
+
 homebrew_installed_packages:
   - terraform
   - postgresql
@@ -22,8 +24,15 @@ install_inconsolata: true
 install_rvm: true
 install_oh_my_zsh: true
 
+configure_dotfiles: true
+dotfiles_repo: git@github.com:carlallen/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/dotfiles
+dotfiles_files:
+  - .zshrc
+  - .osx
+  - .gemrc
 
-# Set to 'true' to configure Sublime Text.
 configure_sublime: true
 sublime_base_path: '~/Library/Application Support/Sublime Text 3'
 sublime_config_path: "Packages/User"
@@ -34,6 +43,7 @@ sublime_package_control:
   - "Git"
   - "GitGutter"
   - "HTML Mustache"
+  - "Jinja2"
   - "Package Control"
   - "Rails Completions"
   - "Sass"

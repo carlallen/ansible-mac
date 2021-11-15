@@ -7,8 +7,13 @@
   roles:
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
+    - role: geerlingguy.dotfiles
+      when: configure_dotfiles
+      tags: ['dotfiles']
 
   tasks:
+    - import_tasks: "tasks/gitconfig.yml"
+      tags: ['gitconfig']
     - import_tasks: tasks/inconsolata.yml
       when: install_inconsolata
       tags: ['inconsolata']

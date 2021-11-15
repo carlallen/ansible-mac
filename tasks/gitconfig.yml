@@ -1,0 +1,4 @@
+- name: Ensure .gitconfig is set up
+  template:
+    src: templates/.gitconfig.j2
+    dest: "~/.gitconfig"
