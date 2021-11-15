@@ -4,6 +4,7 @@
     path: "{{ item }}"
     state: directory
   loop:
+    - "{{ sublime_base_path }}/Packages"
     - "{{ sublime_base_path }}/{{ sublime_config_path }}"
     - "{{ sublime_base_path }}/Installed Packages"
 
@@ -21,7 +22,6 @@
   copy:
     src: files/sublime/freeze_ruby_files/
     dest: "{{ sublime_base_path }}/Packages/freeze_ruby_files/"
-    directory_mode: yes
 
 - name: Ensure Sublime text user Preferences and theme are set.
   copy:
