@@ -21,3 +21,23 @@ homebrew_cask_apps:
 install_inconsolata: true
 install_rvm: true
 install_oh_my_zsh: true
+
+
+# Set to 'true' to configure Sublime Text.
+configure_sublime: true
+sublime_base_path: '~/Library/Application Support/Sublime Text 3'
+sublime_config_path: "Packages/User"
+sublime_package_control:
+  - "AdvancedNewFile"
+  - "Ansible"
+  - "Dockerfile Syntax Highlighting"
+  - "Git"
+  - "GitGutter"
+  - "HTML Mustache"
+  - "Package Control"
+  - "Rails Completions"
+  - "Sass"
+  - "Splunk Conf File Syntax Highlighting"
+  - "Terraform"
+  - "Theme - Phoenix"
+  - "Theme - Soda"

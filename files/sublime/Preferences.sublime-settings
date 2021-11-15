@@ -1,0 +1,34 @@
+{
+	"color_scheme": "Packages/User/GitHub.tmTheme",
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		"coverage",
+		".git",
+		".postgres",
+		"node_modules",
+		"public/packs",
+		"tmp",
+		"vendor/cache",
+		".terraform"
+	],
+	"font_face": "Inconsolata",
+	"font_size": 14,
+	"git_command": "/usr/local/bin/git",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"phoenix_color_blue": true,
+	"phoenix_dirty_bottom_bar": true,
+	"phoenix_dirty_bottom_bar_red": true,
+	"phoenix_highlight_current_tab": true,
+	"phoenix_sidebar_tree_small": true,
+	"phoenix_solid_current_tab": true,
+	"phoenix_tabs_small": true,
+	"tab_size": 2,
+	"theme": "Phoenix Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+}

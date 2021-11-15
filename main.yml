@@ -18,5 +18,8 @@
     - import_tasks: tasks/oh-my-zsh.yml
       when: install_oh_my_zsh
       tags: ['oh-my-zsh']
+    - import_tasks: tasks/sublime-text.yml
+      when: configure_sublime
+      tags: ['sublime-text']
 
 
