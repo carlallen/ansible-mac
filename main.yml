@@ -14,17 +14,25 @@
   tasks:
     - import_tasks: "tasks/gitconfig.yml"
       tags: ['gitconfig']
+
     - import_tasks: tasks/inconsolata.yml
       when: install_inconsolata
       tags: ['inconsolata']
+
     - import_tasks: tasks/rvm.yml
       when: install_rvm
       tags: ['rvm']
+
     - import_tasks: tasks/oh-my-zsh.yml
       when: install_oh_my_zsh
       tags: ['oh-my-zsh']
+
     - import_tasks: tasks/sublime-text.yml
       when: configure_sublime
       tags: ['sublime-text']
+
+    - import_tasks: tasks/osx.yml
+      when: configure_osx
+      tags: ['osx']
 
 

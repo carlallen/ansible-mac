@@ -33,6 +33,8 @@ dotfiles_files:
   - .osx
   - .gemrc
 
+osx_script: "~/.osx --no-restart"
+
 configure_sublime: true
 sublime_base_path: '~/Library/Application Support/Sublime Text 3'
 sublime_config_path: "Packages/User"
