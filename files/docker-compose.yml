@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  postgresql:
+    image: postgis/postgis:13-3.1-alpine
+    environment:
+      POSTGRES_USER: ${USER}
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  cockroach:
+    image: cockroachdb/cockroach:latest
+    ports:
+      - "26257:26257"
+      - "8080:8080"
+    command: "start-single-node --insecure"
+    volumes:
+      - cockroach:/cockroach/cockroach-data
+  memcached:
+    image: memcached:latest
+    ports:
+      - "11211:11211"
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+volumes:
+  cockroach:
+  postgres:
