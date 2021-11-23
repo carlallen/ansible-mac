@@ -13,6 +13,7 @@ homebrew_cask_apps:
   - docker
   - iterm2
   - sublime-text
+  - balenaetcher
   - discord
   - slack
   - zoom
