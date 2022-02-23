@@ -31,8 +31,4 @@
       when: configure_sublime
       tags: ['sublime-text']
 
-    - import_tasks: tasks/osx.yml
-      when: configure_osx
-      tags: ['osx']
-
 
