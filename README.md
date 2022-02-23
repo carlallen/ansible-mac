@@ -4,3 +4,7 @@
 
 ## Bootstrap
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/carlallen/ansible-mac/main/bootstrap.sh)"`
+
+
+## Run Ansible
+`ansible-playbook main.yml --ask-become-pass`
