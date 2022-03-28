@@ -1,7 +1,5 @@
 - name: Ensure Inconsolata font is installed
   copy:
-    become: yes
-    become_method: sudo
     src: "files/fonts/Inconsolata-dz.otf"
     dest: "/Library/Fonts/Inconsolata-dz.otf"
     mode: "755"
