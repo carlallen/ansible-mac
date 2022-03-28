@@ -35,6 +35,7 @@ dotfiles_files:
   - .osx
   - .gemrc
 
+configure_osx: true
 osx_script: "~/.osx --no-restart"
 
 configure_sublime: true
