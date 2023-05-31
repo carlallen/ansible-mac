@@ -28,6 +28,7 @@
 	"phoenix_solid_current_tab": true,
 	"phoenix_tabs_small": true,
 	"tab_size": 2,
+	"rulers": [120,180],
 	"theme": "Phoenix Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,

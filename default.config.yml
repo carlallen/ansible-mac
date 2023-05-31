@@ -56,3 +56,21 @@ sublime_package_control:
   - "Terraform"
   - "Theme - Phoenix"
   - "Theme - Soda"
+
+dockitems_remove:
+  - Launchpad
+  - Mail
+  - Maps
+  - FaceTime
+  - Calendar
+  - Contacts
+  - Reminders
+  - Notes
+  - Freeform
+  - TV
+  - Music
+  - News
+  - Keynote
+  - Numbers
+  - Pages
+  - 'App Store'

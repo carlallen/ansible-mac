@@ -10,6 +10,8 @@
     - role: geerlingguy.dotfiles
       when: configure_dotfiles
       tags: ['dotfiles']
+    - role: geerlingguy.mac.dock
+
 
   tasks:
     - import_tasks: "tasks/gitconfig.yml"
