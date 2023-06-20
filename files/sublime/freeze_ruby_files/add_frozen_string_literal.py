@@ -6,6 +6,12 @@ import re
 class AddFrozenStringLiteral(sublime_plugin.EventListener):
   def on_pre_save(self, view):
     syntax = view.settings().get("syntax")
+    exclude_files = view.settings().get("frozen_string_exclude_files") or []
+
+    for file in exclude_files:
+      if fnmatch.fnmatch(file_name, file):
+        return
+
     find_frozen_string_literal = view.find_all("\A# frozen_string_literal: (true|false)")
     find_frozen_string_literal_exe = view.find_all("\A#!/usr/bin/env ruby\n# frozen_string_literal: (true|false)")
 

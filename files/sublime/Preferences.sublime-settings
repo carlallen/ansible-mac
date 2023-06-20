@@ -13,6 +13,11 @@
 		"vendor/cache",
 		".terraform"
 	],
+	"excluded_frozen_string_files":
+	[
+		"schema.rb",
+		"*.slim"
+	],
 	"font_face": "Inconsolata",
 	"font_size": 14,
 	"git_command": "/usr/local/bin/git",
