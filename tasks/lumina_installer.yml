@@ -11,5 +11,27 @@
     remote_src: yes
   when: not lumina_installed.stat.exists
 
+- name: "Convert Lumina to skip EULA"
+  raw: "hdiutil convert -quiet ~/Desktop/Lumina-0.2.5-8-mac-m1.dmg -format UDTO -o ~/Desktop/Lumina.cdr"
+  when: not lumina_installed.stat.exists
 
+- name: "Mount Installer"
+  raw: "hdiutil attach -quiet -nobrowse -noverify -noautoopen -mountpoint ~/Desktop/LuminaInstaller ~/Desktop/Lumina.cdr"
+  when: not lumina_installed.stat.exists
 
+- name: "Move Lumina to Applications"
+  raw: "mv ~/Desktop/LuminaInstaller/Lumina.app ~/Applications/"
+  when: not lumina_installed.stat.exists
+
+- name: "Detach Lumina Installer"
+  raw: "hdiutil detach ~/Desktop/LuminaInstaller/"
+  when: not lumina_installed.stat.exists
+
+- name: Remove old ttf folder from Hack installation
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - ~/Desktop/__MACOSX
+    - ~/Desktop/Lumina.cdr
+    - ~/Desktop/Lumina-0.2.5-8-mac-m1.dmg
