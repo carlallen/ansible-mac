@@ -1,5 +1,0 @@
-- name: Ensure Inconsolata font is installed
-  copy:
-    src: "files/fonts/Inconsolata-dz.otf"
-    dest: "/Library/Fonts/Inconsolata-dz.otf"
-    mode: "755"

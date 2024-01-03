@@ -1,0 +1,27 @@
+- name: Ensure Inconsolata font is installed
+  ansible.builtin.copy:
+    src: "files/fonts/Inconsolata-dz.otf"
+    dest: "/Library/Fonts/Inconsolata-dz.otf"
+    mode: "755"
+
+- name: Check if Hack font is installed
+  stat:
+    path: "/Library/Fonts/Hack-Regular.ttf"
+  register: hack_installed
+
+- name: Ensure Hack font is downloaded
+  ansible.builtin.unarchive:
+    src: https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
+    dest: "/Library/Fonts/"
+    mode: "755"
+    remote_src: yes
+  when: not hack_installed.stat.exists
+
+- name: Move hack font to base font folder
+  ansible.builtin.raw: "mv /Library/Fonts/ttf/* /Library/Fonts/"
+  when: not hack_installed.stat.exists
+
+- name: Remove old ttf folder from Hack installation
+  ansible.builtin.file:
+    path: /Library/Fonts/ttf
+    state: absent

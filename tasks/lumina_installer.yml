@@ -1,0 +1,15 @@
+- name: Check if Lumina is installed
+  stat:
+    path: "~/Applications//Lumina.app"
+  register: lumina_installed
+
+- name: Download the Lumina app
+  ansible.builtin.unarchive:
+    src: https://dist.getlumina.com/beta/Lumina-0.2.5-8-mac-m1.zip
+    dest: "~/Desktop"
+    mode: "755"
+    remote_src: yes
+  when: not lumina_installed.stat.exists
+
+
+

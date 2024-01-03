@@ -12,14 +12,13 @@
       tags: ['dotfiles']
     - role: geerlingguy.mac.dock
 
-
   tasks:
     - import_tasks: "tasks/gitconfig.yml"
       tags: ['gitconfig']
 
-    - import_tasks: tasks/inconsolata.yml
-      when: install_inconsolata
-      tags: ['inconsolata']
+    - import_tasks: tasks/programming_fonts.yml
+      when: install_programming_fonts
+      tags: ['programming_fonts']
 
     - import_tasks: tasks/rvm.yml
       when: install_rvm
@@ -35,3 +34,6 @@
 
     - import_tasks: tasks/osx.yml
       when: configure_osx
+
+    - import_tasks: tasks/lumina_installer.yml
+      when: install_lumina

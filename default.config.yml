@@ -2,12 +2,10 @@ git_email: github@allenofmn.com
 
 homebrew_installed_packages:
   - terraform
+  - opentofu
   - postgresql
 
-homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
-homebrew_cask_appdir: /Applications
+homebrew_cask_appdir: ~/Applications
 homebrew_cask_apps:
   - brave-browser
   - docker
@@ -22,9 +20,10 @@ homebrew_cask_apps:
   - flux
   - cyberduck
 
-install_inconsolata: true
+install_programming_fonts: true
 install_rvm: true
 install_oh_my_zsh: true
+install_lumina: true
 
 configure_dotfiles: true
 dotfiles_repo: git@github.com:carlallen/dotfiles.git
