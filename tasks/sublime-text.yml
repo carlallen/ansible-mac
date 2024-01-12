@@ -18,10 +18,10 @@
     src: templates/Package_Control.sublime-settings.j2
     dest: "{{ sublime_base_path }}/{{ sublime_config_path }}/Package Control.sublime-settings"
 
-- name: Ensure Sublime freeze_ruby_files is installed
-  copy:
-    src: files/sublime/freeze_ruby_files/
-    dest: "{{ sublime_base_path }}/Packages/freeze_ruby_files/"
+# - name: Ensure Sublime freeze_ruby_files is installed
+#   copy:
+#     src: files/sublime/freeze_ruby_files/
+#     dest: "{{ sublime_base_path }}/Packages/freeze_ruby_files/"
 
 - name: Ensure Sublime text user Preferences and theme are set.
   copy:
