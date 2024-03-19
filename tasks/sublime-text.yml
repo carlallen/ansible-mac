@@ -1,6 +1,6 @@
 ---
 - name: Ensure Sublime Text directories exist.
-  file:
+  ansible.builtin.file:
     path: "{{ item }}"
     state: directory
   loop:
@@ -9,12 +9,12 @@
     - "{{ sublime_base_path }}/Installed Packages"
 
 - name: Ensure Sublime Package Control is installed.
-  get_url:
+  ansible.builtin.get_url:
     url: "https://packagecontrol.io/Package%20Control.sublime-package"
     dest: "{{ sublime_base_path }}/Installed Packages/Package Control.sublime-package"
 
 - name: Ensure Sublime Package Control Packages are configured.
-  template:
+  ansible.builtin.template:
     src: templates/Package_Control.sublime-settings.j2
     dest: "{{ sublime_base_path }}/{{ sublime_config_path }}/Package Control.sublime-settings"
 
@@ -24,7 +24,7 @@
 #     dest: "{{ sublime_base_path }}/Packages/freeze_ruby_files/"
 
 - name: Ensure Sublime text user Preferences and theme are set.
-  copy:
+  ansible.builtin.copy:
     src: "files/sublime/{{ item }}"
     dest: "{{ sublime_base_path }}/{{ sublime_config_path }}/{{ item }}"
   loop:

@@ -19,6 +19,7 @@ homebrew_cask_apps:
   - steam
   - flux
   - cyberduck
+  - vscodium
 
 install_programming_fonts: true
 install_rvm: true

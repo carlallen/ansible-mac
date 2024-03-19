@@ -1,8 +1,10 @@
 - name: Detect rvm binary
-  stat:
+  ansible.builtin.stat:
     path: ~/.rvm/bin/rvm
   register: rvm_binary
 
 - name: Install rvm
-  shell: "curl -sSL https://get.rvm.io | bash -s stable"
-  when: not rvm_binary.stat.exists
+  ansible.builtin.shell:
+    cmd: set -o pipefail && curl -sSL https://get.rvm.io | bash -s stable
+    executable: /bin/bash
+  changed_when: not rvm_binary.stat.exists

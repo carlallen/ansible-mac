@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: Ansible Mac
+  hosts: all
 
   vars_files:
     - default.config.yml
@@ -13,27 +14,34 @@
     - role: geerlingguy.mac.dock
 
   tasks:
-    - import_tasks: "tasks/gitconfig.yml"
+    - name: Import Gitconfig
+      ansible.builtin.import_tasks: "tasks/gitconfig.yml"
       tags: ['gitconfig']
 
-    - import_tasks: tasks/programming_fonts.yml
+    - name: Import Programming Fonts
+      ansible.builtin.import_tasks: tasks/programming_fonts.yml
       when: install_programming_fonts
       tags: ['programming_fonts']
 
-    - import_tasks: tasks/rvm.yml
+    - name: Import RVM
+      ansible.builtin.import_tasks: tasks/rvm.yml
       when: install_rvm
       tags: ['rvm']
 
-    - import_tasks: tasks/oh-my-zsh.yml
+    - name: Import oh-my-zsh
+      ansible.builtin.import_tasks: tasks/oh-my-zsh.yml
       when: install_oh_my_zsh
       tags: ['oh-my-zsh']
 
-    - import_tasks: tasks/sublime-text.yml
+    - name: Import Sublime Text
+      ansible.builtin.import_tasks: tasks/sublime-text.yml
       when: configure_sublime
       tags: ['sublime-text']
 
-    - import_tasks: tasks/osx.yml
+    - name: Import OSX
+      ansible.builtin.import_tasks: tasks/osx.yml
       when: configure_osx
 
-    - import_tasks: tasks/lumina_installer.yml
+    - name: Import Luminia Installer
+      ansible.builtin.import_tasks: tasks/lumina_installer.yml
       when: install_lumina
