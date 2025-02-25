@@ -5,14 +5,14 @@
 
 - name: Download the Lumina app
   ansible.builtin.unarchive:
-    src: https://dist.getlumina.com/beta/Lumina-0.2.5-8-mac-m1.zip
+    src: https://dist.getlumina.com/beta/Lumina-0.2.6-3-mac-m1.zip
     dest: "~/Desktop"
     mode: "755"
     remote_src: true
   when: not lumina_installed.stat.exists
 
 - name: Convert Lumina to skip EULA
-  ansible.builtin.raw: "hdiutil convert -quiet ~/Desktop/Lumina-0.2.5-8-mac-m1.dmg -format UDTO -o ~/Desktop/Lumina.cdr"
+  ansible.builtin.raw: "hdiutil convert -quiet ~/Desktop/Lumina-0.2.6-3-mac-m1.dmg -format UDTO -o ~/Desktop/Lumina.cdr"
   when: not lumina_installed.stat.exists
 
 - name: "Mount Installer"
@@ -34,5 +34,5 @@
   with_items:
     - ~/Desktop/__MACOSX
     - ~/Desktop/Lumina.cdr
-    - ~/Desktop/Lumina-0.2.5-8-mac-m1.dmg
+    - ~/Desktop/Lumina-0.2.6-3-mac-m1.dmg
   when: not lumina_installed.stat.exists
