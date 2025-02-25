@@ -4,5 +4,5 @@
   register: oh_my_zsh_install
 
 - name: Install oh-my-zsh
-  ansible.buitlin.shell: "KEEP_ZSHRC=yes sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
+  ansible.builtin.shell: "KEEP_ZSHRC=yes sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
   changed_when: not oh_my_zsh_install.stat.exists

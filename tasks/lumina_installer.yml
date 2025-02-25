@@ -12,19 +12,19 @@
   when: not lumina_installed.stat.exists
 
 - name: Convert Lumina to skip EULA
-  ansible.buitlin.raw: "hdiutil convert -quiet ~/Desktop/Lumina-0.2.5-8-mac-m1.dmg -format UDTO -o ~/Desktop/Lumina.cdr"
+  ansible.builtin.raw: "hdiutil convert -quiet ~/Desktop/Lumina-0.2.5-8-mac-m1.dmg -format UDTO -o ~/Desktop/Lumina.cdr"
   when: not lumina_installed.stat.exists
 
 - name: "Mount Installer"
-  ansible.buitlin.raw: "hdiutil attach -quiet -nobrowse -noverify -noautoopen -mountpoint ~/Desktop/LuminaInstaller ~/Desktop/Lumina.cdr"
+  ansible.builtin.raw: "hdiutil attach -quiet -nobrowse -noverify -noautoopen -mountpoint ~/Desktop/LuminaInstaller ~/Desktop/Lumina.cdr"
   when: not lumina_installed.stat.exists
 
 - name: "Move Lumina to Applications"
-  ansible.buitlin.raw: "mv ~/Desktop/LuminaInstaller/Lumina.app /Applications/"
+  ansible.builtin.raw: "mv ~/Desktop/LuminaInstaller/Lumina.app /Applications/"
   when: not lumina_installed.stat.exists
 
 - name: "Detach Lumina Installer"
-  ansible.buitlin.raw: "hdiutil detach ~/Desktop/LuminaInstaller/"
+  ansible.builtin.raw: "hdiutil detach ~/Desktop/LuminaInstaller/"
   when: not lumina_installed.stat.exists
 
 - name: Remove lumina installer folder

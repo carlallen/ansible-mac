@@ -3,7 +3,7 @@ git_email: github@allenofmn.com
 homebrew_installed_packages:
   - terraform
   - opentofu
-  - postgresql
+  #- postgresql
 
 homebrew_cask_appdir: ~/Applications
 homebrew_cask_apps:
