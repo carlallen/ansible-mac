@@ -4,6 +4,7 @@ homebrew_installed_packages:
   - terraform
   - opentofu
   - direnv
+  - rust
   #- postgresql
 
 homebrew_cask_appdir: ~/Applications

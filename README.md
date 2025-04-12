@@ -11,3 +11,7 @@
 
 ## Run Ansible
 `ansible-playbook main.yml --ask-become-pass`
+
+
+## Ruby Installation
+`rvm install $(cat .ruby-version) --reconfigure --enable-yjit --with-openssl-dir=$(brew --prefix openssl@3)`
