@@ -3,6 +3,7 @@ git_email: github@allenofmn.com
 homebrew_installed_packages:
   - terraform
   - opentofu
+  - direnv
   #- postgresql
 
 homebrew_cask_appdir: ~/Applications
@@ -19,7 +20,8 @@ homebrew_cask_apps:
   - steam
   - flux
   - cyberduck
-  - vscodium
+  - visual-studio-code
+  - jellyfin-media-player
 
 install_programming_fonts: true
 install_rvm: true
