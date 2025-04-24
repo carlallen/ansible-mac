@@ -5,7 +5,8 @@ homebrew_installed_packages:
   - opentofu
   - direnv
   - rust
-  #- postgresql
+  - ansible-lint
+  # - postgresql
 
 homebrew_cask_appdir: ~/Applications
 homebrew_cask_apps:
@@ -13,6 +14,8 @@ homebrew_cask_apps:
   - docker
   - iterm2
   - sublime-text
+  - visual-studio-code
+  - postman
   - balenaetcher
   - discord
   - slack
@@ -21,8 +24,9 @@ homebrew_cask_apps:
   - steam
   - flux
   - cyberduck
-  - visual-studio-code
+  - fantastical
   - jellyfin-media-player
+  - nordvpn
 
 install_programming_fonts: true
 install_rvm: true

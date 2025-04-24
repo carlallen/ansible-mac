@@ -19,7 +19,7 @@
 
 - name: Move hack font to base font folder
   ansible.builtin.raw: "mv /Library/Fonts/ttf/* /Library/Fonts/"
-  when: not hack_installed.stat.exists
+  changed_when: not hack_installed.stat.exists
 
 - name: Remove old ttf folder from Hack installation
   ansible.builtin.file:
