@@ -6,6 +6,9 @@ homebrew_installed_packages:
   - direnv
   - rust
   - ansible-lint
+  - libpq
+  # - npm
+  # - yarn
   # - postgresql
 
 homebrew_cask_appdir: ~/Applications
