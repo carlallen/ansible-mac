@@ -13,23 +13,26 @@ homebrew_installed_packages:
 
 homebrew_cask_appdir: ~/Applications
 homebrew_cask_apps:
+  - claude-code
   - brave-browser
-  - docker
+  - slack
   - iterm2
   - sublime-text
   - visual-studio-code
   - postman
   - balenaetcher
   - discord
-  - slack
-  - zoom
   - spotify
   - steam
   - flux
   - cyberduck
   - fantastical
   - jellyfin-media-player
+  # These apps fail to install the first time until the become_password is set
+  - docker
   - nordvpn
+  - zoom
+# ansible_become_password: ""
 
 install_programming_fonts: true
 install_rvm: true
@@ -44,6 +47,7 @@ dotfiles_files:
   - .zshrc
   - .osx
   - .gemrc
+  - .ssh/config
 
 configure_osx: true
 osx_script: "~/.osx --no-restart"
@@ -84,3 +88,12 @@ dockitems_remove:
   - Numbers
   - Pages
   - 'App Store'
+  - Games
+  - Safari
+  - Phone
+
+
+dockitems_persist:
+  - name: "Brave Browser"
+    path: "~/Applications/Brave Browser.app"
+    pos: 3
