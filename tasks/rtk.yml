@@ -1,0 +1,9 @@
+- name: Check if rtk is installed
+  ansible.builtin.stat:
+    path: "~/.claude/hookes/rtk-rewrite.sh"
+  register: rtk_installed
+
+- name: Install rtk
+  ansible.builtin.command: rtk init --global
+  when: not rtk_installed.stat.exists
+  changed_when: not rtk_installed.stat.exists

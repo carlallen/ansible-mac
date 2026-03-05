@@ -45,3 +45,7 @@
     - name: Import Luminia Installer
       ansible.builtin.import_tasks: tasks/lumina_installer.yml
       when: install_lumina
+
+    - name: Install rtk
+      ansible.builtin.import_tasks: tasks/rtk.yml
+      when: install_rtk

@@ -7,6 +7,7 @@ homebrew_installed_packages:
   - rust
   - ansible-lint
   - libpq
+  - rtk
   # - npm
   # - yarn
   # - postgresql
@@ -15,6 +16,7 @@ homebrew_cask_appdir: ~/Applications
 homebrew_cask_apps:
   - claude-code
   - brave-browser
+  - google-chrome
   - slack
   - iterm2
   - sublime-text
@@ -38,6 +40,7 @@ install_programming_fonts: true
 install_rvm: true
 install_oh_my_zsh: true
 install_lumina: true
+install_rtk: true
 
 configure_dotfiles: true
 dotfiles_repo: git@github.com:carlallen/dotfiles.git
