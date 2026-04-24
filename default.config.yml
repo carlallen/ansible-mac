@@ -31,6 +31,7 @@ homebrew_cask_apps:
   - fantastical
   - jellyfin-media-player
   - caffeine
+  - claude
   # These apps fail to install the first time until the become_password is set
   - docker
   - nordvpn
