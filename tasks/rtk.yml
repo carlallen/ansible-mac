@@ -1,9 +1,20 @@
+- name: Check if .claude exists
+  ansible.builtin.stat:
+    path: "~/.claude"
+  register: claude_dir
+
+- name: Create claude dir
+  ansible.builtin.file:
+    path: "~/.claude"
+    state: directory
+  changed_when: not claude_dir.stat.exists
+
 - name: Check if rtk is installed
   ansible.builtin.stat:
     path: "~/.claude/hookes/rtk-rewrite.sh"
   register: rtk_installed
 
 - name: Install rtk
-  ansible.builtin.command: rtk init --global
+  ansible.builtin.command: /opt/homebrew/bin/rtk init --global
   when: not rtk_installed.stat.exists
   changed_when: not rtk_installed.stat.exists

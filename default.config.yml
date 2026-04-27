@@ -1,7 +1,7 @@
 git_email: github@allenofmn.com
 
 homebrew_installed_packages:
-  - terraform
+  # - terraform
   - opentofu
   - direnv
   - rust
