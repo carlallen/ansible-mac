@@ -8,6 +8,7 @@ homebrew_installed_packages:
   - ansible-lint
   - libpq
   - rtk
+  - playwright-cli
   # - npm
   # - yarn
   # - postgresql

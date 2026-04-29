@@ -10,7 +10,7 @@
 `ansible-galaxy install -r requirements.yml`
 
 ## Run Ansible
-`ansible-playbook main.yml --ask-become-pass`
+`bin/run`
 
 
 ## Ruby Installation
