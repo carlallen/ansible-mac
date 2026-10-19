@@ -2,6 +2,12 @@
 - name: Ansible Mac
   hosts: all
 
+
+  vars_prompt:
+    - name: ansible_become_password
+      prompt: “Enter password for brew installs”
+      private: yes
+
   vars_files:
     - default.config.yml
 
