@@ -9,7 +9,6 @@ homebrew_installed_packages:
   - libpq
   - rtk
   - playwright-cli
-  - rbenv/tap/openssl@1.1
   # - npm
   # - yarn
   # - postgresql
